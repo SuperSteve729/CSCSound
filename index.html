@@ -1,0 +1,93 @@
+<!--Alberto Perez II-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="code.js"></script>
+    <script src="class.js"></script>
+    <script src="dataLoader.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script>
+        //Global vars
+        var theTime = new Date();
+        var tempTime = new Date();
+        var time_interval = 5000;
+        var last_iteration = 0;
+        var running = true;
+        var index = 0;
+        var timer;
+        var data = getData();
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAT Space Program</title>
+</head>
+<body>
+    <table>
+        <td><img src="UATspaceLogo-1.jpg" alt="UAT Space Mission 3 Logo"></td>
+        <td><h1>UAT Space Program</h1></td>
+
+    </table>
+
+    <table id ="data" width = "70%" border="2">
+        <thead>
+            <th>Data Type</th>
+            <th>Reading</th>
+        </thead>
+        <tbody>
+            <tr id = "tab_Seconds"></tr>
+            <tr id = "tab_Latitude"></tr>
+            <tr id = "tab_Longitude"></tr>
+            <tr id = "tab_GPS"></tr>
+            <tr id = "tab_BMPAltitude"></tr>
+            <tr id = "tab_BMPPressure"></tr>
+            <tr id = "tab_BMPTemp"></tr>
+            <tr id = "tab_digitalSensorTemp"></tr>
+            <tr id = "tab_CSSSensorTemp"></tr>
+            <tr id = "tab_CSSSensorECO2"></tr>
+            <tr id = "tab_CSSSensorTVOC"></tr>
+            <tr id = "tab_UV"></tr>
+            <tr id = "tab_accelX"></tr>
+            <tr id = "tab_accelY"></tr>
+            <tr id = "tab_accelZ"></tr>
+            <tr id = "tab_magnetX"></tr>
+            <tr id = "tab_magnetY"></tr>
+            <tr id = "tab_magnetZ"></tr>
+            <tr id = "tab_gyroX"></tr>
+            <tr id = "tab_gyroY"></tr>
+            <tr id = "tab_gyroZ"></tr>
+        </tbody>
+
+    </table>
+    <br/>
+    <button id = "startButton" class="button" onclick="start()">Start</button>
+    <button id = "stopButton" class="button" disabled = true onclick="stop()">Stop</button>
+
+    <br>
+    <p id= "countDownTimer">
+        Waiting for start...
+    </p>
+    
+    <button onclick="playCraps()">Play Craps!</button>
+    <br/>
+    <p id = "die1"> Die 1... </p>
+    <p id = "die2"> Die 2... </p>
+    <p id = "sum"> Sum... </p>
+    <p id = "crapsResults"> Results... </p>
+    <br/>
+    <br/>
+
+    <script>
+        var fallLaunch = new Mission(75, 100, 25, "Jerry Seinfield", 31, "October", 2021, 5);
+        var springLaunch = new Mission(25, 50, 5, "Mario", 12, "April", 2022, 3);
+
+
+    </script>
+    <button class="button" onclick="launchFall()">Launch Fall Mission</button> 
+    <button class="button" onclick="displayFall()">Display Fall Mission</button><br> 
+    <br/>
+    <button class="button" onclick="playStation()">Play SpaceStation Sounds</button> 
+
+
+</body>
+</html>
